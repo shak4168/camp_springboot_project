@@ -16,11 +16,13 @@ public class OrderController {
 
     private final OrderService orderService;
 
+    // 주문 생성
     @PostMapping
     public OrderResponse createOrder(@RequestBody @Valid OrderRequest request) {
         return orderService.createOrder(request);
     }
 
+    // 주문 가져오기
     @GetMapping("/{id}")
     public OrderResponse getOrder(@PathVariable Long id) {
         return orderService.getOrder(id);

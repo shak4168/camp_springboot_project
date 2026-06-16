@@ -32,7 +32,7 @@ public class ProductService {
     // 상품 가져오기
     @Transactional(readOnly = true)
     public ProductResponse getProduct(Long id) {
-        Product product = productRepository.findById(id)
+        Product product = productRepository.findByIdAndIsDeletedFalse(id)
                 .orElseThrow(() -> new IllegalArgumentException("상품을 찾을 수 없습니다."));
 
         return new ProductResponse(product);
@@ -41,7 +41,7 @@ public class ProductService {
     // 모든 상품 리스트 조회
     @Transactional(readOnly = true)
     public List<ProductResponse> getProducts(){
-        return productRepository.findAll().stream()
+        return productRepository.findAllByIsDeletedFalse().stream()
                 .map(ProductResponse::new)
                 .toList();
     }
