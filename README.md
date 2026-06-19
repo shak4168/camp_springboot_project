@@ -23,10 +23,16 @@ Spring Boot JPA를 활용한 상품 및 주문 관리 CRUD 프로젝트
 ## 재고 1인 상품에 대해 주문을 2번 시도했을 때 결과
 - 첫 번째 시도
 <img width="1410" height="286" alt="image" src="https://github.com/user-attachments/assets/3d1968b3-a4b1-4447-81ac-f96c5d381418" />
-- 두 번째 시도
+- 두 번째 시도 (500 에러)
 <img width="1414" height="283" alt="image" src="https://github.com/user-attachments/assets/77de4d9e-a4ee-41d4-a417-d56254511f3c" />
 <img width="1329" height="162" alt="image" src="https://github.com/user-attachments/assets/7cff355d-477f-4e04-9259-81ba0174578f" />
 
+## 추가 내용
+### 예외처리
+- 첫 시도
+<img width="1400" height="378" alt="image" src="https://github.com/user-attachments/assets/adb18bf7-3bbe-4d0b-aa49-a7df66cddb62" />
+- 두 번째 시도 (400 에러)
+<img width="1138" height="321" alt="image" src="https://github.com/user-attachments/assets/839b5b01-4589-4415-942d-b6a25e116846" />
 
 ## 실행 방법
 1. 프로젝트 클론
