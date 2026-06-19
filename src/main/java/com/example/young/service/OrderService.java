@@ -22,7 +22,7 @@ public class OrderService {
     private final ProductRepository productRepository;
 
     public OrderResponse createOrder(OrderRequest request) {
-        Product product = productRepository.findById(request.getProductId())
+        Product product = productRepository.findByIdAndIsDeletedFalse(request.getProductId())
                 .orElseThrow(() -> new IllegalArgumentException("상품을 찾을 수 없습니다."));
 
         product.decreaseStock(request.getQuantity());

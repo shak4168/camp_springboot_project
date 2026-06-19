@@ -23,19 +23,19 @@ public class ProductController {
         return productService.createProduct(request);
     }
 
-    // 해당하는 상품 번호를 매핑
+    // 해당하는 상품 번호 조회
     @GetMapping("/{id}")
     public ProductResponse getProduct(@PathVariable Long id) {
         return productService.getProduct(id);
     }
 
-    // 상품 전체 매핑
+    // 상품 전체 조회
     @GetMapping
     public List<ProductResponse> getProducts() {
         return productService.getProducts();
     }
 
-    // 상품 업데이트
+    // 상품 수정
     @PutMapping("/{id}")
     public ProductResponse updateProduct(@PathVariable Long id, @RequestBody @Valid ProductRequest request) {
         return productService.updateProduct(id, request);
